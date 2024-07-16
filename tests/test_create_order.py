@@ -5,6 +5,7 @@ from data import Data
 from generator import generate_data
 import allure
 
+
 class TestCreateOrder:
     @allure.title('Тест создания заказа с авторизацией и ингредиентами')
     def test_create_order_with_auth_and_ingredients(self):
@@ -55,5 +56,3 @@ class TestCreateOrder:
         order = get_orders(token=None)
 
         assert order.status_code == Data.UNAUTHORIZED
-
-

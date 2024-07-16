@@ -1,4 +1,3 @@
-
 from data import Data
 from generator import generate_data
 from api_method import create_user
@@ -40,8 +39,6 @@ class TestCreateUser:
         delete_user()
 
         assert (response.status_code == Data.FORBIDDEN and response.json()["success"] == False)
-
-
 
     @allure.title('Тест создания уже зарегистрированного пользователя')
     def test_create_duplicate_user(self):

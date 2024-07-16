@@ -12,5 +12,3 @@ def generate_data():
         "name": name
     }
     return payload
-
-print(generate_data())
